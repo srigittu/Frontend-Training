@@ -1,0 +1,12 @@
+// Indicator
+
+@mixin indicator($size) {
+	background-color: $indicator-bg-clr;
+	border: $size / 2 solid $indicator-border-clr;
+	border-radius: 50%;
+	content: '';
+	display: inline-block;
+	height: $size;
+	margin: 0 5px;
+	width: $size;
+}

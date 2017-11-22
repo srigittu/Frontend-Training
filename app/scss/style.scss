@@ -1,0 +1,13 @@
+// Import variables, typography and other helpers 
+@import "base/_variables";
+@import "base/_mixins";
+@import "base/_typography";
+@import "base/_components";
+
+// Import partials like header and footer files
+@import "partials/_header";
+@import "partials/_footer";
+
+// Import page files
+@import "pages/_home";
+

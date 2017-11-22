@@ -1,0 +1,34 @@
+.header {
+	box-shadow: inset 0px -80px 80px -40px $secondary-bg-clr;
+	padding: 0;
+}
+.logo {
+	width: 20%;
+}
+.menu-bar {
+	width: 80%;
+	.menu-button {
+		width: 20px;
+		height: 20px;
+		float: right;
+		.line {
+			width: 25px;
+			height: 1px;
+			margin: 2px 0;
+			background-color: #000;
+			float: right;
+		}
+		.line-short {
+			width: 22px;
+			height: 1px;
+			margin: 2px 0;
+			background-color: #000;
+			float: right;
+		}
+	}
+}
+.nav-bar {
+	display: flex;
+	padding: 2% 0; 
+	width: 100%;
+}

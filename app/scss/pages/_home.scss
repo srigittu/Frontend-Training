@@ -1,0 +1,231 @@
+.about {
+	button {
+		background-color: $secondary-bg-clr;
+    	border: 1px solid $font-color;
+	}
+}
+.acheivements {
+	text-align: center;
+}
+.header-body {
+	padding: 15% 0;
+	h1 {
+		font-size: $font-size;
+		font-weight: 300;
+		margin: 1% 0;
+	}
+	h3 {
+		font-size: ((40 / 100) * $font-size);
+		font-weight: 200;
+		margin: 1% 0;
+	}
+	h4 {
+		font-size: ((25 / 100) * $font-size);
+		font-weight: 100;
+		margin: 1% 0;
+	}
+	.fa {
+		color: $indicator-bg-clr;
+	}
+}
+.flow-chart {
+	position: relative;
+	text-align: center;
+	margin: 2% 0;
+	.flow-chart-container {
+		display: inline-block;
+		position: relative;
+		width: 100%;
+		.flow-chart-content {
+			display: inline-block;
+			position: relative;
+			width: 100%;
+			&:first-child {
+				margin-top: 5%;
+			}
+			&:last-child {
+				margin-bottom: 5%;
+			}
+		}
+		&:before {
+			background-color: $indicator-bg-clr;
+		    content: '';
+		    display: block;
+		    height: 100%;
+		    left: calc(50% - 1px);
+		    position: absolute;
+		    width: 2px;
+		    z-index: 1;
+		}
+	}
+	&:after {
+		@include indicator(10px);
+		display: block;
+	    margin: 0;
+	    left: calc(50% - 10px);
+	    position: absolute;
+	    top: 99%;
+	}
+	&:before {
+		@include indicator(10px);
+	    display: block;
+	    margin: 0;
+	    left: calc(50% - 10px);
+	    position: absolute;
+	    top: -1%;
+	}
+}
+.flow-left {
+	float: left;
+	margin: 0 -3%;
+	text-align: right;
+	width: 50%;
+	h3 {
+		display: block;
+		position: relative;
+		&:after {
+			@include indicator(8px);
+		    display: block;
+		    margin: 0;
+		    left: calc(106% - 8px);
+		    position: absolute;
+		    top: 25%;
+		}
+	}
+}
+.flow-right {
+	float: right;
+	margin: 0 -3%;
+	text-align: left;
+	width: 50%;
+	h3 {
+		display: block;
+		position: relative;
+		&:after {
+			@include indicator(8px);
+		    display: block;
+		    margin: 0;
+		    right: calc(106% - 8px);
+		    position: absolute;
+		    top: 25%;
+		}
+	}
+}
+.graph {
+	h2 {
+		text-align: center;
+		padding-bottom: 2%;
+	}
+	.container {
+		padding: 2% 0;
+	}
+}
+.services {
+	text-align: center;
+	h3 {
+		font-size: ((30 / 100) * $font-size);
+		font-weight: 200;
+		margin: 1% 0;
+	}
+	.row {
+		padding: 5% 0;
+	}
+}
+.skills {
+	.row {
+		text-align: center;
+	}
+	.progress-bar {
+		background-color: #b7b7b7;
+		display: block;
+		height: 3px;
+		margin: 0 auto;
+		width: 50%;
+		.progress-value-bar {
+			background-color: $indicator-bg-clr;
+			display: block;
+			height: 3px;
+			width: 50%;
+		}
+	}
+}
+@media screen and (max-width: 1030px) {
+	.header-body {
+		h1 {
+			font-size: $font-size / 1.25;
+		}
+		h3 {
+			font-size: ((40 / 100) * $font-size / 1.25);
+		}
+		h4 {
+			font-size: ((25 / 100) * $font-size / 1.25);
+		}
+	}
+	.services {
+		h3 {
+			font-size: ((30 / 100) * $font-size / 1.25); 
+		}
+	}
+}
+@media screen and (max-width: 790px) {
+	.header-body {
+		h1 {
+			font-size: $font-size / 1.5;
+		}
+		h3 {
+			font-size: ((40 / 100) * $font-size / 1.5);
+		}
+		h4 {
+			font-size: ((25 / 100) * $font-size / 1.5);
+		}
+	}
+	.services {
+		h3 {
+			font-size: ((30 / 100) * $font-size / 1.5); 
+		}
+	}
+	.flow-chart {
+		&:after {
+			@include indicator(5px);
+		    left: calc(50% - 10px);
+		}
+		&:before {
+			@include indicator(5px);
+		    left: calc(50% - 10px);
+		}
+	}
+	.flow-left {
+		h3 {
+			&:after {
+				@include indicator(4px);
+			    left: calc(106% - 9px);
+			}
+		}
+	}
+	.flow-right {
+		h3 {
+			&:after {
+				@include indicator(4px);
+			    right: calc(106% - 9px);
+			}
+		}
+	}
+}
+@media screen and (max-width: 450px) {
+	.header-body {
+		h1 {
+			font-size: $font-size / 1.75;
+		}
+		h3 {
+			font-size: ((40 / 100) * $font-size / 1.75);
+		}
+		h4 {
+			font-size: ((25 / 100) * $font-size / 1.75);
+		}
+	}
+	.services {
+		h3 {
+			font-size: ((30 / 100) * $font-size / 1.75); 
+		}
+	}
+}

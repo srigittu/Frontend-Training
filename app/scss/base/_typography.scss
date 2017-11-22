@@ -1,0 +1,50 @@
+body {
+	color: $font-color;
+	font-family: $font-family;
+	margin: 0;
+	width: 100%;
+}
+h3 {
+	font-size: ((30 / 100) * $font-size);
+	font-weight: 200;
+	margin: 1% 0;
+}
+p {
+	font-size: ((23 / 100) * $font-size);
+}
+section {
+	padding: 5% 0;
+	width: 100%;
+	&:nth-child(2n+1) {
+	  background-color: $primary-bg-clr;
+	  box-shadow: inset 0px 80px 80px -40px $secondary-bg-clr, inset 0px -80px 80px -40px $secondary-bg-clr;
+	}
+	&.header {
+	  box-shadow: inset 0px -80px 80px -40px $secondary-bg-clr;
+	  padding: 0;
+	}
+}
+@media screen and (max-width: 1030px) {
+	h3 {
+		font-size: ((30 / 100) * $font-size / 1.25);
+	}
+	p {
+		font-size: ((23 / 100) * $font-size / 1.25);
+	}
+}
+@media screen and (max-width: 790px) {
+	h3 {
+		font-size: ((30 / 100) * $font-size / 1.5);
+	}
+	p {
+		font-size: ((23 / 100) * $font-size / 1.5);
+	}
+}
+@media screen and (max-width: 450px) {
+	h3 {
+		font-size: ((30 / 100) * $font-size / 1.75);
+	}
+	p {
+		font-size: ((23 / 100) * $font-size / 1.75);
+	}
+}
