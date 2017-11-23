@@ -1,52 +1,33 @@
-.about {
-	button {
-		background-color: $secondary-bg-clr;
-    	border: 1px solid $font-color;
-	}
-}
 .acheivements {
 	text-align: center;
 }
-.header-body {
-	padding: 15% 0;
-	h1 {
-		font-size: $font-size;
-		font-weight: 300;
-		margin: 1% 0;
+.companies {
+	text-align: center;
+	.col-div {
+		width: 16.66%;
 	}
-	h3 {
-		font-size: ((40 / 100) * $font-size);
-		font-weight: 200;
-		margin: 1% 0;
+	img {
+		height: 80%;
+		width: 80%;
 	}
-	h4 {
-		font-size: ((25 / 100) * $font-size);
-		font-weight: 100;
-		margin: 1% 0;
+}
+.contact {
+	text-align: center;
+	.col-div {
+		width: 33.33%;
 	}
-	.fa {
-		color: $indicator-bg-clr;
+	.row {
+		margin: 5% 0;
 	}
 }
 .flow-chart {
+	margin: 2% 0;
 	position: relative;
 	text-align: center;
-	margin: 2% 0;
 	.flow-chart-container {
 		display: inline-block;
 		position: relative;
 		width: 100%;
-		.flow-chart-content {
-			display: inline-block;
-			position: relative;
-			width: 100%;
-			&:first-child {
-				margin-top: 5%;
-			}
-			&:last-child {
-				margin-bottom: 5%;
-			}
-		}
 		&:before {
 			background-color: $indicator-bg-clr;
 		    content: '';
@@ -58,58 +39,46 @@
 		    z-index: 1;
 		}
 	}
-	&:after {
+	&:before, &:after {
 		@include indicator(10px);
 		display: block;
-	    margin: 0;
 	    left: calc(50% - 10px);
+	    margin: 0;
 	    position: absolute;
 	    top: 98%;
 	}
 	&:before {
-		@include indicator(10px);
-	    display: block;
-	    margin: 0;
-	    left: calc(50% - 10px);
-	    position: absolute;
 	    top: -2%;
 	}
 }
-.flow-left {
+.flow-chart-content {
+	display: inline-block;
+	position: relative;
+	width: 100%;
+	&:before {
+		@include indicator(8px);
+		display: block;
+	    margin: 0;
+	    left: calc(50% - 8px);
+	    position: absolute;
+	    top: 5px;
+	}
+	&:first-child {
+		margin-top: 5%;
+	}
+	&:last-child {
+		margin-bottom: 5%;
+	}
+}
+.flow-left, .flow-right {
 	float: left;
 	margin: 0 -3%;
 	text-align: right;
 	width: 50%;
-	h3 {
-		display: block;
-		position: relative;
-		&:after {
-			@include indicator(8px);
-		    display: block;
-		    margin: 0;
-		    left: calc(106% - 8px);
-		    position: absolute;
-		    top: 25%;
-		}
-	}
 }
 .flow-right {
 	float: right;
-	margin: 0 -3%;
 	text-align: left;
-	width: 50%;
-	h3 {
-		display: block;
-		position: relative;
-		&:after {
-			@include indicator(8px);
-		    display: block;
-		    margin: 0;
-		    right: calc(106% - 8px);
-		    position: absolute;
-		    top: 25%;
-		}
-	}
 }
 .graph {
 	h2 {
@@ -122,11 +91,16 @@
 }
 .portfolio {
 	display: inline-block;
+	width: 100%;
+	ul {
+    	padding: 0;
+    	text-align: center;
+	}
 	li {
-		padding: 0 2px;
 		display: inline-block;
+		padding: 0 2px;
 		position: relative;
-		&.active:before {
+		&.active:before, &.active:after {
 			background-color: $indicator-bg-clr;
 			content: '';
 			display: inline-block;
@@ -137,36 +111,25 @@
 			width: 60%;
 		}
 		&.active:after {
-			background-color: $indicator-bg-clr;
-			content: '';
-			display: inline-block;
-			height: 1px;
-			left: 0;
 			margin-top: 5px;
-			position: absolute;
-			top: 100%;
 			width: 100%;
 		}
 
 	}
-	.list {
-		text-align: center;
-	}
 	.row {
-		display: inline-block;
 		padding: 5% 0;
-		margin: 0 15%;
-		width: 70%;
 	}
 	.col-div {
-		float: left;
-		padding: 0;
 		padding-bottom: 5%;
 		text-align: center;
 		width: 33.33%;
+		div {
+			margin: 0 5%;
+		}
 		img {
-			max-width: 100%;
+			box-shadow: 5px 5px 5px -5px $dark-primary-bg-clr;
 			height: auto;
+			width: 100%;
 		}
 	}
 }
@@ -180,22 +143,23 @@
 	.row {
 		padding: 5% 0;
 	}
+	.services-content {
+		margin: 0 2%;
+	}
 }
 .skills {
 	.row {
 		text-align: center;
 	}
-	.progress-bar {
-		background-color: #b7b7b7;
+	.progress-bar, .progress-value-bar {
+		background-color: $dark-primary-bg-clr;
 		display: block;
 		height: 3px;
 		margin: 0 auto;
 		width: 50%;
 		.progress-value-bar {
 			background-color: $indicator-bg-clr;
-			display: block;
-			height: 3px;
-			width: 50%;
+			margin: 0;
 		}
 	}
 }
@@ -223,6 +187,13 @@
 	}
 }
 @media screen and (max-width: 790px) {
+	.contact {
+		.row {
+			.col-div {
+				width: 100%;
+			}
+		}
+	}
 	.header-body {
 		h1 {
 			font-size: $font-size / 1.5;
@@ -248,26 +219,16 @@
 			@include indicator(5px);
 		    left: calc(50% - 10px);
 		}
-	}
-	.flow-left {
-		h3 {
-			&:after {
+		.flow-chart-content {
+			&:before {
 				@include indicator(4px);
-			    left: calc(106% - 9px);
-			}
-		}
-	}
-	.flow-right {
-		h3 {
-			&:after {
-				@include indicator(4px);
-			    right: calc(106% - 9px);
+			    left: calc(50% - 9px);
 			}
 		}
 	}
 	.portfolio {
 		.col-div {
-			width: 100%;
+			width: 50%;
 		}
 	}
 }

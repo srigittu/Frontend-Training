@@ -4,6 +4,17 @@ body {
 	margin: 0;
 	width: 100%;
 }
+button {
+	background-color: $secondary-bg-clr;
+	border: 1px solid $font-color;
+}
+input {
+	border: none;
+	border-bottom: 1px solid $dark-primary-bg-clr;
+	font-size: ((23 / 100) * $font-size);
+	padding: 5px 0;
+	width: 100%;
+}
 h3 {
 	font-size: ((30 / 100) * $font-size);
 	font-weight: 200;
@@ -19,13 +30,12 @@ section {
 		background-color: $primary-bg-clr;
 		box-shadow: inset 0px 80px 80px -40px $secondary-bg-clr, inset 0px -80px 80px -40px $secondary-bg-clr;
 	}
-	&.header {
-	    background-image: url(/assets/images/background.jpg);
-	    background-size: cover;
-	    background-repeat: no-repeat;
-		box-shadow: inset 0px -80px 80px -40px $secondary-bg-clr;
-		padding: 0;
-	}
+}
+textarea {
+	border: none;
+	border-bottom: 1px solid $dark-primary-bg-clr;
+	font-size: ((23 / 100) * $font-size);
+	width: 100%;
 }
 ul li {
   	display: inline;
@@ -34,35 +44,53 @@ ul li {
 	margin: 1% 0;
 }
 @media screen and (max-width: 1030px) {
+	input {
+		font-size: ((23 / 100) * $font-size / 1.75);
+	}
 	h3 {
 		font-size: ((30 / 100) * $font-size / 1.25);
+	}
+	p {
+		font-size: ((23 / 100) * $font-size / 1.25);
+	}
+	textarea {
+		font-size: ((23 / 100) * $font-size / 1.25);
 	}
 	ul li {
 	  	font-size: ((30 / 100) * $font-size / 1.25);
   	}
-	p {
-		font-size: ((23 / 100) * $font-size / 1.25);
-	}
 }
 @media screen and (max-width: 790px) {
+	input {
+		font-size: ((23 / 100) * $font-size / 1.75);
+	}
 	h3 {
 		font-size: ((30 / 100) * $font-size / 1.5);
+	}
+	p {
+		font-size: ((23 / 100) * $font-size / 1.5);
+	}
+	textarea {
+		font-size: ((23 / 100) * $font-size / 1.5);
 	}
 	ul li {
 	  	font-size: ((30 / 100) * $font-size / 1.5);
   	}
-	p {
-		font-size: ((23 / 100) * $font-size / 1.5);
-	}
 }
 @media screen and (max-width: 450px) {
+	input {
+		font-size: ((23 / 100) * $font-size / 1.75);
+	}
 	h3 {
 		font-size: ((30 / 100) * $font-size / 1.75);
+	}
+	p {
+		font-size: ((23 / 100) * $font-size / 1.75);
+	}
+	textarea {
+		font-size: ((23 / 100) * $font-size / 1.75);
 	}
 	ul li {
 	  	font-size: ((30 / 100) * $font-size / 1.75);
   	}
-	p {
-		font-size: ((23 / 100) * $font-size / 1.75);
-	}
 }

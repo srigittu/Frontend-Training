@@ -1,16 +1,42 @@
 .col-div {
-	padding: 0 2%;
+	float: left;
 	width: 25%;
 }
 .container {
 	margin: 0 10%;
+	position: relative;
 	width: 80%;
 }
 .indicator {
 	@include indicator(8px);
 }
+.fields {
+	padding-bottom: 5%;
+	width: 100%;
+}
+.field-area {
+	border: 1px solid $dark-primary-bg-clr;
+	margin: 0 auto;
+	padding: 5%;
+	width: 60%;
+}
+.fields-row {
+	.fields {
+		float: left;
+		width: 50%;
+		input {
+			float: left;
+			width: 90%;
+		}
+		&:nth-child(2) {
+			input {
+				float: right;
+			}
+		}
+	}
+}
 .row {
-	display: flex;
+	display: inline-block;
 	width: 100%;
 }
 .sec-title {
@@ -27,16 +53,19 @@
 	.sec-title {
 		font-size: ((50 / 100) * $font-size / 1.5);
 	}
-	.row {
-		display: inline-block;
-		position: relative;
-		.col-div {
-		    width: 45%;
-		    float: left;
-		}
+	.col-div {
+	    width: 50%;
 	}
 }
 @media screen and (max-width: 450px) {
+	.fields-row {
+		.fields {
+			width: 100%;
+			input {
+				width: 100%;
+			}
+		}
+	}
 	.sec-title {
 		font-size: ((50 / 100) * $font-size / 1.75);
 	}

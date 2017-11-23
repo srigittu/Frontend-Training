@@ -1,29 +1,52 @@
-.header {
-	box-shadow: inset 0px -80px 80px -40px $secondary-bg-clr;
-	padding: 0;
+section {
+	&.header {
+	    background-image: url(/assets/images/background.jpg);
+	    background-repeat: no-repeat;
+	    background-size: cover;
+		box-shadow: inset 0px -80px 80px -40px $secondary-bg-clr;
+		padding: 0;
+	}
 }
+.header-body {
+	padding: 15% 0;
+	h1 {
+		font-size: $font-size;
+		font-weight: 300;
+		margin: 1% 0;
+	}
+	h3 {
+		font-size: ((40 / 100) * $font-size);
+		font-weight: 200;
+		margin: 1% 0;
+	}
+	h4 {
+		font-size: ((25 / 100) * $font-size);
+		font-weight: 100;
+		margin: 1% 0;
+	}
+	.fa {
+		color: $indicator-bg-clr;
+	}
+}
+
 .logo {
 	width: 20%;
 }
 .menu-bar {
 	width: 80%;
 	.menu-button {
-		width: 20px;
-		height: 20px;
 		float: right;
-		.line {
-			width: 25px;
-			height: 1px;
-			margin: 2px 0;
+		height: 20px;
+		width: 20px;
+		.line, .line-short {
 			background-color: #000;
 			float: right;
+			height: 1px;
+			margin: 2px 0;
+			width: 25px;
 		}
 		.line-short {
 			width: 22px;
-			height: 1px;
-			margin: 2px 0;
-			background-color: #000;
-			float: right;
 		}
 	}
 }
