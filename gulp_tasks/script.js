@@ -11,10 +11,10 @@ var config = require( './config' );
 
 
 //gulp scripts task which compress all application js files
-gulp.task( 'compile:scripts', function() {
+gulp.task( 'script', function() {
 	console.log( config.notify.update( '\n-------------------- Running SCRIPT tasks ------------------------\n' ) );
-	return gulp.src( [ config.source.js+'/*.js', config.source.js+'/**/*.js' ] )
-		.pipe( concat( 'application.js' ) )
+	return gulp.src( config.source.js+'/**/*.js' )
+		.pipe( concat( 'main.js' ) )
 		.pipe( gulp.dest( config.build.js ) );
 } );
 
@@ -23,6 +23,6 @@ gulp.task( 'uglify-scripts', function() {
 	console.log( config.notify.update( '\n---------------- Running minify all scripts tasks -----------------\n' ) );
 	return gulp.src(config.build.js+'/*.js')
 		.pipe(uglify())
-		.pipe(concat('application.min.js'))
+		.pipe(concat('main.min.js'))
 		.pipe(gulp.dest(config.build.js));
 } );

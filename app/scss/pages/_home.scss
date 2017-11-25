@@ -19,6 +19,26 @@
 	.row {
 		margin: 5% 0;
 	}
+	.fa {
+		color: $indicator-bg-clr;
+	}
+}
+.floater {
+	a {
+		background-color: $indicator-bg-clr;
+		color: #000;
+		display: block;
+		position: fixed;
+		right: 1%;
+		bottom: 2%;
+		width: 10%;
+		height: 40px;
+		border-radius: 25px;
+		text-decoration: none;
+		text-align: center;
+		line-height: 40px;
+		border: 10px solid $indicator-border-clr;
+	}
 }
 .flow-chart {
 	margin: 2% 0;
@@ -150,6 +170,9 @@
 .skills {
 	.row {
 		text-align: center;
+		.col-div {
+			padding-bottom: 2%;
+		}
 	}
 	.progress-bar, .progress-value-bar {
 		background-color: $dark-primary-bg-clr;

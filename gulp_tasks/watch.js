@@ -11,18 +11,8 @@ var gulp = require( 'gulp' ),
 
 gulp.task( 'watch', function() {
 	console.log( config.notify.update( '\n----------------------- Watching All Files --------------------------\n' ) );
-	var HTML = gulp.watch(['app/*.html', 'app/**/*.html'], ['asset']);
-	gulp.watch('../build/*.html', reload);
+	var HTML = gulp.watch('app/**/*.html', ['asset']);
+	gulp.watch('../build/**/*.html', ['inject', reload]);
 	var SASS = gulp.watch(['app/scss/**/*.scss'], ['style']);
-	var log = function( event ) {
-		if ( event.type === 'deleted' ) {
-			runSequence( 'clean' );
-			setTimeout( function() {
-				runSequence('style', 'watch');
-			}, 500 );
-		}
-		console.log( config.notify.update( '\n--------- File ' + event.path + ' was ' + event.type + ' ---------\n' ) );
-	};
-	//on change print file name and event type
-	SASS.once( 'update', log );
+	var JS = gulp.watch(['app/js/**/*.js'], ['script', reload]);
 } );

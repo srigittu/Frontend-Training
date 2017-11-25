@@ -18,6 +18,6 @@ gulp.task( 'font', function() {
 //gulp scripts task which compress and hint all application js files
 gulp.task( 'asset', ['font', 'image'], function() {
 	console.log( config.notify.update( '\n------------------------- Running Assests tasks --------------------------\n' ) );
-	return gulp.src( 'app/index.html' )
+	return gulp.src( 'app/*.html' )
 		.pipe(gulp.dest('../build/'));
 });

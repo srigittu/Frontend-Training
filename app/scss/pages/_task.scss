@@ -1,0 +1,13 @@
+section.task {
+	background-color: $secondary-bg-clr;
+	padding: 2% 0;
+	.sec-title {
+		text-align: center;
+	}
+	.fields {
+		p {
+			display: inline-block;
+			padding-left: 5%;
+		}
+	}
+}

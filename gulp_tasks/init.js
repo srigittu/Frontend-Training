@@ -13,6 +13,7 @@ gulp.task( 'build', function() {
 	runSequence(
 		'clean',
 		'server',
+		'script',
 		'style',
 		'asset',
 		'inject',
