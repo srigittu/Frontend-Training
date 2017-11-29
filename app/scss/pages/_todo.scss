@@ -1,0 +1,159 @@
+section.todo {
+	padding: 0;
+	display: table;
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	.side-panel {
+		background-color: #ffffff;
+		display: table-cell;
+		width: 15%;
+	}
+	.middle-panel {
+		background-color: #03ecec;
+		display: table-cell;
+		width: 85%;
+	}
+}
+.side-panel {
+	position: relative;
+	color: #000000;
+	input {
+		background-color: transparent;
+		color: #000000;
+		font-size: 0.8em;
+	}
+	ul {
+		text-align: center;
+		padding: 0;
+	}
+	.sec-title {
+		margin: 0;
+		padding: 2% 10%;
+	}
+	.list-container {
+		margin: 2px;
+		padding: 0 10%;
+	}
+}
+.panel-bottom {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	button {
+		background-color: transparent;
+		border: none;
+		.fa {
+			font-size: 2em;
+			color: #000000;
+		}
+	}
+}
+.middle-panel {
+	.sec-title {
+		margin: 0;
+		text-align: center;
+		width: 69%;
+	}
+}
+.sub-task-container {
+	width: 65%;
+	height: 100%;
+	float: left;
+	margin: 2%;
+	.sub-task-card {
+		background-color: #fafafa;
+		border-radius: 5px;
+		margin-bottom: 2%;
+	    height: 50px;
+	    position: relative;
+	    &:hover {
+	    	background-color: #cacaca;
+	    }
+	}
+	input[type="checkbox"] {
+		width: inherit;
+		position: absolute;
+	    margin: 4%;
+	    margin-top: 20px;
+	}
+	label {
+		line-height: 50px;
+	    padding-left: 10%;
+	    font-size: 1.3em;
+	}
+	[class^="action-icon-"] {
+		position: absolute;
+		right: 0;
+		line-height: 50px;
+		width: 15%;
+		display: none;
+		.fa {
+			margin: 10%;
+		}
+		.fa-close:hover {
+			color: #ff0000;
+			cursor: pointer;
+		}
+		.fa-check:hover {
+			color: #17ff00;
+			cursor: pointer;
+		}
+	}
+	.panel-bottom {
+		right: 28%;
+	    margin: 0;
+	    width: 55%;
+	    bottom: 1%;
+	    input {
+	    	background-color: transparent;
+	    	display: block;
+			float: left;
+			margin-top: 8px;
+	    	width: 95%;    
+	    }
+	    button {
+	    	margin-top: 8px;
+	    }
+	}
+}
+.comment-item {
+	position: relative;
+	p {
+		display: inline-block;
+	}
+}
+.created-at {
+	font-size: 0.7em;
+    position: absolute;
+    right: 5px;
+    bottom: 0;
+}
+.middle-panel-container {
+	height: 100%;
+}
+.description-container {
+	width: 27%;
+	height: 100%;
+	float: left;
+	padding: 1%;
+    background-color: #fff;
+    margin-top: 2%;
+    border-radius: 5px;
+	textarea {
+    	background-color: transparent;
+	}
+	.panel-bottom {
+		right: 2%;
+    	margin: 0 3px;
+    	width: 23%;
+    	bottom: 1%;
+    	input {
+    		background-color: transparent;
+    		width: 85%;
+    	}
+    	button {
+    		float: right;
+    	}
+	}
+}

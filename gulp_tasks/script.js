@@ -14,7 +14,7 @@ var config = require( './config' );
 gulp.task( 'script', function() {
 	console.log( config.notify.update( '\n-------------------- Running SCRIPT tasks ------------------------\n' ) );
 	return gulp.src( config.source.js+'/**/*.js' )
-		.pipe( concat( 'main.js' ) )
+		// .pipe( concat( 'main.js' ) )
 		.pipe( gulp.dest( config.build.js ) );
 } );
 

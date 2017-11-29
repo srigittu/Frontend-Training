@@ -38,6 +38,9 @@
 		text-align: center;
 		line-height: 40px;
 		border: 10px solid $indicator-border-clr;
+		&:last-child {
+    		left: 1%;
+		}
 	}
 }
 .flow-chart {
