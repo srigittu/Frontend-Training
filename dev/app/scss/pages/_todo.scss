@@ -10,7 +10,7 @@ section.todo {
 		width: 15%;
 	}
 	.middle-panel {
-		background-color: #03ecec;
+		background-color: #000000;
 		display: table-cell;
 		width: 85%;
 	}
@@ -35,10 +35,13 @@ section.todo {
 		margin: 2px;
 		padding: 0 10%;
 	}
+	.panel-bottom {
+		top: 12px;
+    	right: 15px;
+	}
 }
 .panel-bottom {
 	position: absolute;
-	bottom: 0;
 	right: 0;
 	button {
 		background-color: transparent;
@@ -51,6 +54,7 @@ section.todo {
 }
 .middle-panel {
 	.sec-title {
+		color: #ffffff;
 		margin: 0;
 		text-align: center;
 		width: 69%;
@@ -101,19 +105,24 @@ section.todo {
 		}
 	}
 	.panel-bottom {
-		right: 28%;
+		right: 26%;
 	    margin: 0;
-	    width: 55%;
-	    bottom: 1%;
+	    width: 57%;
+	    top: 58px;
 	    input {
 	    	background-color: transparent;
+    		color: #ffffff;
 	    	display: block;
 			float: left;
 			margin-top: 8px;
-	    	width: 95%;    
+	    	width: 92%;
+	    	margin-right: 3px;    
 	    }
 	    button {
 	    	margin-top: 8px;
+			.fa {
+				color: #ffffff;
+			}
 	    }
 	}
 }
@@ -131,6 +140,7 @@ section.todo {
 }
 .middle-panel-container {
 	height: 100%;
+	margin-top: 3%;
 }
 .description-container {
 	width: 27%;
