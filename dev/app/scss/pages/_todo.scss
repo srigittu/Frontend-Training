@@ -1,0 +1,182 @@
+section.todo {
+    display: table;
+    padding: 0;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    .side-panel {
+        background-color: $white-clr;
+        display: table-cell;
+        width: 15%;
+    }
+    .middle-panel {
+        background-color: $black-clr;
+        display: table-cell;
+        width: 85%;
+    }
+}
+
+.sec-title {
+    font-size: ((50 / 100) * $font-size);
+    font-weight: 400;
+    margin: 1% 0;
+}
+.side-panel {
+    color: $black-clr;
+    position: relative;
+    input {
+        background-color: transparent;
+        color: $black-clr;
+        font-size: 0.8em;
+    }
+    ul {
+        padding: 0;
+        text-align: center;
+    }
+    .sec-title {
+        margin: 0;
+        padding: 2% 10%;
+    }
+    .list-container {
+        margin: 2px;
+        padding: 0 10%;
+    }
+    .panel-bottom {
+        right: 15px;
+        top: 12px;
+    }
+}
+
+.panel-bottom {
+    position: absolute;
+    right: 0;
+    button {
+        background-color: transparent;
+        border: none;
+        .fa {
+            color: $black-clr;
+            font-size: 2em;
+        }
+    }
+}
+
+.middle-panel {
+    .sec-title {
+        color: $white-clr;
+        margin: 0;
+        text-align: center;
+        width: 69%;
+    }
+}
+
+.sub-task-container {
+    float: left;
+    height: 100%;
+    margin: 2%;
+    width: 65%;
+    .sub-task-card {
+        background-color: $subtask-card;
+        border-radius: 5px;
+        height: 50px;
+        margin-bottom: 2%;
+        position: relative;
+        &:hover {
+            background-color: $subtask-card-hover;
+        }
+    }
+    input[type="checkbox"] {
+        position: absolute;
+        margin: 4%;
+        margin-top: 20px;
+        width: inherit;
+    }
+    label {
+        font-size: 1.3em;
+        line-height: 50px;
+        padding-left: 10%;
+    }
+    [class^="action-icon-"] {
+        display: none;
+        line-height: 50px;
+        position: absolute;
+        right: 0;
+        width: 15%;
+        .fa {
+            margin: 10%;
+        }
+        .fa-close:hover {
+            color: $subtask-card-remove;
+            cursor: pointer;
+        }
+        .fa-check:hover {
+            color: $subtask-card-done;
+            cursor: pointer;
+        }
+    }
+    .panel-bottom {
+        margin: 0;
+        right: 26%;
+        top: 58px;
+        width: 57%;
+        input {
+            background-color: transparent;
+            color: $white-clr;
+            display: block;
+            float: left;
+            margin-right: 3px;
+            margin-top: 8px;
+            width: 92%;
+        }
+        button {
+            margin-top: 8px;
+            .fa {
+                color: $white-clr;
+            }
+        }
+    }
+}
+
+.comment-item {
+    position: relative;
+    p {
+        display: inline-block;
+    }
+}
+
+.created-at {
+    bottom: 0;
+    font-size: 0.7em;
+    position: absolute;
+    right: 5px;
+}
+
+.middle-panel-container {
+    height: 100%;
+    margin-top: 3%;
+}
+
+.description-container {
+    border-radius: 5px;
+    background-color: $white-clr;
+    float: left;
+    height: 100%;
+    padding: 1%;
+    margin-top: 2%;
+    width: 27%;
+    textarea {
+        background-color: transparent;
+    }
+    .panel-bottom {
+        bottom: 1%;
+        margin: 0 3px;
+        right: 2%;
+        width: 23%;
+        input {
+            background-color: transparent;
+            width: 85%;
+        }
+        button {
+            float: right;
+        }
+    }
+}

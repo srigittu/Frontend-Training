@@ -1,0 +1,45 @@
+body {
+	color: $font-color;
+	font-family: $font-family;
+	margin: 0;
+	width: 100%;
+}
+button {
+	background-color: $secondary-bg-clr;
+	border: 1px solid $font-color;
+}
+input {
+	border: none;
+	border-bottom: 1px solid $dark-primary-bg-clr;
+	font-size: ((23 / 100) * $font-size);
+	padding: 5px 0;
+	width: 100%;
+}
+h3 {
+	font-size: ((30 / 100) * $font-size);
+	font-weight: 200;
+	margin: 1% 0;
+}
+p {
+	font-size: ((23 / 100) * $font-size);
+}
+section {
+	padding: 5% 0;
+	width: 100%;
+	&:nth-child(2n+1) {
+		background-color: $primary-bg-clr;
+		box-shadow: inset 0px 80px 80px -40px $secondary-bg-clr, inset 0px -80px 80px -40px $secondary-bg-clr;
+	}
+}
+textarea {
+	border: none;
+	border-bottom: 1px solid $dark-primary-bg-clr;
+	font-size: ((23 / 100) * $font-size);
+	width: 100%;
+}
+ul li {
+  	display: inline;
+  	font-size: ((30 / 100) * $font-size);
+	font-weight: 200;
+	margin: 1% 0;
+}
