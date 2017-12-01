@@ -36,6 +36,7 @@ middlePanelTitle.textContent = 'Todo';
 body.insertBefore(headerSection, body.firstChild);
 headerSection.appendChild(sidePanel);
 headerSection.appendChild(middlePanel);
+headerSection.appendChild(descriptionContent);
 
 
 // Side panel elements
@@ -49,7 +50,7 @@ sidePanel.appendChild(sidePanelAddTask);
 // Middle panel elements
 middlePanel.appendChild(middlePanelTitle);
 middlePanelContent.appendChild(subTaskContent);
-middlePanelContent.appendChild(descriptionContent);
+// middlePanelContent.appendChild(descriptionContent);
 middlePanel.appendChild(middlePanelContent);
 addTaskButton.addEventListener('click', addTask);
 
@@ -69,10 +70,10 @@ function addTask() {
         if (!listMenuItems) {
             throw new UserException('Menu list not found');
         }
-        if (listMenuItems.length > 14) {
-            alert('Task limit exceeds');
-            return false;
-        }
+        // if (listMenuItems.length > 14) {
+        //     alert('Task limit exceeds');
+        //     return false;
+        // }
         var sideMenuItem = getCreateElement('li');
         var menuItem = { name: '', subtasks: [] };
         var taskInput = getCreateElement('input');
@@ -99,6 +100,7 @@ function changeTask(event) {
         subTaskContent.innerHTML = '';
         showTaskDetail(id);
         getQuerySelector('.description-container').style.display = 'none';
+        middlePanel.style.width = '85%';
         event.target.onkeyup = function() {
             listMenuItems[id].name = event.target.value;
             middlePanelTitle.textContent = listMenuItems[id].name;
@@ -132,11 +134,11 @@ function showTaskDetail(id) {
             subtasksList.appendChild(createSubtask(subtaskItem, index, id));
         });
 
+        subTaskContent.appendChild(middlePanelAddTask);
         subTaskContent.appendChild(subtasksList);
         addSubTaskButton.appendChild(addSubTaskIcon);
         middlePanelAddTask.appendChild(addSubTaskInput);
         middlePanelAddTask.appendChild(addSubTaskButton);
-        subtasksList.appendChild(middlePanelAddTask);
     } catch (execption) {
         console.log(execption.message, execption.name);
     }
@@ -230,6 +232,7 @@ function removeTask(index, id) {
         listMenuItems[id].subtasks.splice(index, 1);
         document.getElementById('sub-task-card-' + index).remove();
         getQuerySelector('.description-container').style.display = 'none';
+        middlePanel.style.width = '85%';
         subTaskContent.innerHTML = '';
         showTaskDetail(id);
     } catch (execption) {
@@ -249,6 +252,7 @@ function completeTask(index, id) {
 function showSubTaskDetails(index, id) {
     try {
         getQuerySelector('.description-container').style.display = 'inline-block';
+        middlePanel.style.width = '65%';
         var showSubTaskDetail = getCreateElement('div');
         var subTaskTextBox = getCreateElement('textarea');
         var middlePanelAddTask = getCreateElement('div');

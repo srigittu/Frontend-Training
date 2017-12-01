@@ -1,17 +1,15 @@
 section.todo {
-    display: table;
+    display: flex;
+    min-height: 100vh;
     padding: 0;
-    position: fixed;
-    height: 100%;
     width: 100%;
     .side-panel {
         background-color: $white-clr;
-        display: table-cell;
         width: 15%;
     }
     .middle-panel {
         background-color: $black-clr;
-        display: table-cell;
+        background: radial-gradient(#8a96b9, #00ffd0);
         width: 85%;
     }
 }
@@ -40,16 +38,15 @@ section.todo {
     .list-container {
         margin: 2px;
         padding: 0 10%;
+        margin-top: 27px;
     }
     .panel-bottom {
-        right: 15px;
-        top: 12px;
+        position: absolute;
+        right: 0;
     }
 }
 
 .panel-bottom {
-    position: absolute;
-    right: 0;
     button {
         background-color: transparent;
         border: none;
@@ -65,20 +62,18 @@ section.todo {
         color: $white-clr;
         margin: 0;
         text-align: center;
-        width: 69%;
     }
 }
 
 .sub-task-container {
-    float: left;
     height: 100%;
     margin: 2%;
-    width: 65%;
+    width: 96%;
     .sub-task-card {
         background-color: $subtask-card;
         border-radius: 5px;
         height: 50px;
-        margin-bottom: 2%;
+        margin-top: 2%;
         position: relative;
         &:hover {
             background-color: $subtask-card-hover;
@@ -114,21 +109,18 @@ section.todo {
         }
     }
     .panel-bottom {
-        margin: 0;
-        right: 26%;
-        top: 58px;
-        width: 57%;
         input {
             background-color: transparent;
             color: $white-clr;
             display: block;
             float: left;
-            margin-right: 3px;
-            margin-top: 8px;
-            width: 92%;
+            margin-right: 5px;
+            width: 95%;
+            &:focus {
+                border-bottom: 2px solid #ffffff;
+            }
         }
         button {
-            margin-top: 8px;
             .fa {
                 color: $white-clr;
             }
@@ -151,7 +143,6 @@ section.todo {
 }
 
 .middle-panel-container {
-    height: 100%;
     margin-top: 3%;
 }
 
@@ -159,21 +150,16 @@ section.todo {
     border-radius: 5px;
     background-color: $white-clr;
     float: left;
-    height: 100%;
     padding: 1%;
-    margin-top: 2%;
-    width: 27%;
+    width: 18%;
     textarea {
         background-color: transparent;
     }
     .panel-bottom {
-        bottom: 1%;
-        margin: 0 3px;
-        right: 2%;
-        width: 23%;
+        margin-top: 20px;
         input {
             background-color: transparent;
-            width: 85%;
+            width: 84%;
         }
         button {
             float: right;
